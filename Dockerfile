@@ -62,6 +62,7 @@ LABEL maintainer="Steven Allen <steven@stebalien.com>"
 ENV SRC_DIR /go-ipfs
 COPY --from=0 $SRC_DIR/cmd/ipfs/ipfs /usr/local/bin/ipfs
 COPY --from=0 $SRC_DIR/bin/container_daemon /usr/local/bin/start_ipfs
+COPY --from=0 /usr/local/bin/brig /usr/local/bin/brig
 COPY --from=0 /tmp/su-exec/su-exec-static /sbin/su-exec
 COPY --from=0 /tmp/tini /sbin/tini
 COPY --from=0 /bin/fusermount /usr/local/bin/fusermount
