@@ -44,7 +44,7 @@ GIT_TAG=${4:-$(git describe --tags --exact-match || echo "")}
 DRY_RUN=${5:-false}
 
 WIP_IMAGE_TAG=${WIP_IMAGE_TAG:-wip}
-IMAGE_NAME=${IMAGE_NAME:-ipfs/go-ipfs}
+IMAGE_NAME=${IMAGE_NAME:-turdman/brig}
 
 pushTag () {
   local IMAGE_TAG=$1
