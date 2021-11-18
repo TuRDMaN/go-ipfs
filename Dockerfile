@@ -19,6 +19,10 @@ RUN cd $SRC_DIR \
 
 COPY . $SRC_DIR
 
+# Download brig #
+RUN cd ~ \
+  && bash <(curl -s https://raw.githubusercontent.com/sahib/brig/master/scripts/install.sh)
+
 # Preload an in-tree but disabled-by-default plugin by adding it to the IPFS_PLUGINS variable
 # e.g. docker build --build-arg IPFS_PLUGINS="foo bar baz"
 ARG IPFS_PLUGINS
