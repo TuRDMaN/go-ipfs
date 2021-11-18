@@ -22,7 +22,7 @@ COPY . $SRC_DIR
 
 # Download brig #
 RUN cd ~ \
-  && wget https://raw.githubusercontent.com/sahib/brig/master/scripts/install.sh
+  && wget https://raw.githubusercontent.com/sahib/brig/master/scripts/install.sh \
   && /bin/bash ~/install.sh
 
 # Preload an in-tree but disabled-by-default plugin by adding it to the IPFS_PLUGINS variable
