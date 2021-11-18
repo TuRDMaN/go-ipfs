@@ -14,7 +14,7 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: turdman/brig
+      IMAGE_NAME: 'turdman/brig'
       WIP_IMAGE_TAG: wip
     steps:
       - name: Check out the repo
