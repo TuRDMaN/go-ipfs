@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
   libssl-dev \
   ca-certificates \
   fuse \
+  wget \
   curl \
   bash
 
@@ -21,7 +22,8 @@ COPY . $SRC_DIR
 
 # Download brig #
 RUN cd ~ \
-  && bash <(curl -s https://raw.githubusercontent.com/sahib/brig/master/scripts/install.sh)
+  && wget https://raw.githubusercontent.com/sahib/brig/master/scripts/install.sh
+  && /bin/bash ~/install.sh
 
 # Preload an in-tree but disabled-by-default plugin by adding it to the IPFS_PLUGINS variable
 # e.g. docker build --build-arg IPFS_PLUGINS="foo bar baz"
