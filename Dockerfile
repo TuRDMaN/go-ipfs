@@ -6,7 +6,9 @@ LABEL maintainer="Steven Allen <steven@stebalien.com>"
 RUN apt-get update && apt-get install -y \
   libssl-dev \
   ca-certificates \
-  fuse
+  fuse \
+  curl \
+  bash
 
 ENV SRC_DIR /go-ipfs
 
