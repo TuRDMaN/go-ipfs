@@ -14,14 +14,14 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: 'turdman/brig'
+      IMAGE_NAME: turdman/brig
       WIP_IMAGE_TAG: wip
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
 
       - name: Build wip Docker image
-        run: docker build -t $IMAGE_NAME .
+        run: docker build -t turdman/brig .
 
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
